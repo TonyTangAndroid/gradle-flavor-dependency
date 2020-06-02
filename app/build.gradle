@@ -13,6 +13,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        manifestPlaceholders.metadata_1 = "${metadata_1_value}"
+        manifestPlaceholders.metadata_2 = "${metadata_2_value}"
     }
     buildTypes {
         release {
@@ -27,11 +30,16 @@ android {
         internal {
             dimension "target"
             buildConfigField "String", "SERVER_URL", SERVER_URL_INTERNAL
+
+            manifestPlaceholders.metadata_1 = "${metadata_1_internal_value}"
+            manifestPlaceholders.metadata_2 = "${metadata_2_internal_value}"
         }
 
         external {
             dimension "target"
             buildConfigField "String", "SERVER_URL", SERVER_URL_EXTERNAL
+            manifestPlaceholders.metadata_1 = "${metadata_1_external_value}"
+            manifestPlaceholders.metadata_2 = "${metadata_2_external_value}"
         }
     }
 }
