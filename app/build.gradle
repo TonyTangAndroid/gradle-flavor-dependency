@@ -26,10 +26,12 @@ android {
     productFlavors {
         internal {
             dimension "target"
+            buildConfigField "String", "SERVER_URL", SERVER_URL_INTERNAL
         }
 
         external {
             dimension "target"
+            buildConfigField "String", "SERVER_URL", SERVER_URL_EXTERNAL
         }
     }
 }
