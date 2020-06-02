@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         textView.append(metadata("metadata_1"))
         textView.append("\n")
         textView.append(metadata("metadata_2"))
+        textView.append("\n")
+        textView.append(BuildConfig.APPLICATION_ID)
     }
 
     private fun metadata(metadataKey: String): CharSequence? {

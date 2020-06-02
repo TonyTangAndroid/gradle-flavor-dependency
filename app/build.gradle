@@ -33,6 +33,7 @@ android {
 
             manifestPlaceholders.metadata_1 = "${metadata_1_internal_value}"
             manifestPlaceholders.metadata_2 = "${metadata_2_internal_value}"
+            applicationIdSuffix ".internal_app"
         }
 
         external {
@@ -40,6 +41,7 @@ android {
             buildConfigField "String", "SERVER_URL", SERVER_URL_EXTERNAL
             manifestPlaceholders.metadata_1 = "${metadata_1_external_value}"
             manifestPlaceholders.metadata_2 = "${metadata_2_external_value}"
+            applicationIdSuffix ".external_app"
         }
     }
 }
